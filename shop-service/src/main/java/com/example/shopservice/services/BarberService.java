@@ -25,6 +25,10 @@ public class BarberService{
         return barbers;
     }
 
+    public Barber findById(Long id){
+        return barberRepo.findById(id).get();
+    }
+
     public Barber saveNewBarber(Barber barber){
         return barberRepo.save(barber);
     }

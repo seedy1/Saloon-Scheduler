@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-//@RequestMapping("/")
 public class BarberController{
 
     @Autowired
@@ -22,6 +21,11 @@ public class BarberController{
     @GetMapping("/barbers")
     public List<Barber> listAll(){
         return barberService.getAll();
+    }
+
+    @GetMapping("/barbers/{id}")
+    public Barber findById(@PathVariable("id") Long id){
+        return barberService.findById(id);
     }
 
     // add a new barber to a shop
