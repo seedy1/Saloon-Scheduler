@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ShopRepo extends JpaRepository<Shop, Long>{
 
-//    Shop findByShopId(Long id);
+//    Shop findById(Long id);
 
 }
 

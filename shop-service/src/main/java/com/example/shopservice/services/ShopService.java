@@ -21,4 +21,12 @@ public class ShopService {
 //        return barberShops;
         return  shopRepo.findAll();
     }
+
+    public Shop findById(Long id){
+
+//        Shop shop = new Shop();
+        return shopRepo.findById(id).get();
+
+    }
+
 }

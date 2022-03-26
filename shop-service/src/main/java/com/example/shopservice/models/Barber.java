@@ -1,5 +1,6 @@
 package com.example.shopservice.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,12 +24,10 @@ public class Barber extends AbstractModel{
 
     private String email;
     private String phoneNumber;
-//    private List<String, List<String>, Boolean> schedule;
-//    private ArrayList<Date> schedule;
 
-   //    @ElementCollection private HashMap<Date, Boolean> schedule; create available
 
     @ManyToOne
     @JoinColumn(name= "shop_id")
+    @JsonIgnore
     private Shop shop;
 }

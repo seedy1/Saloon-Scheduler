@@ -1,5 +1,6 @@
 package com.example.shopservice.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -26,6 +27,7 @@ public class Shop extends AbstractModel{
     }
 
     @OneToMany(mappedBy = "shop", fetch = FetchType.EAGER)
+//    @JsonIgnore
     private List<Barber> barbes = new LinkedList<>();
 
     private String name;
