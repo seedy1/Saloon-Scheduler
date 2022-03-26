@@ -2,6 +2,8 @@ server:
   port: 8191
 
 spring:
+  application:
+    name: shop-service
   datasource:
     url: jdbc:mysql://localhost:3307/shopService
     username: root
@@ -14,3 +16,11 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5Dialect
 #    MySQL5InnoDBDialect
 
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8161/eureka
+  instance:
+    hostname: localhost
