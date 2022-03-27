@@ -1,0 +1,37 @@
+server:
+  port: 8193
+
+spring:
+  application:
+    name: API-GATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes:
+        - id: shop-service
+          uri: lb://shop-service
+          predicates:
+            - Path=/shops/**, /barbers/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: shop-service
+                fallbackUri: forward:/shopServiceFallBack
+
+        - id: appointment-service
+          uri: lb://appointment-service
+          predicates:
+            - Path=/appointments/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: appointment-service
+                fallbackUri: forward:/appointmentServiceFallBack
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8161/eureka
+  instance:
+    hostname: localhost
