@@ -13,9 +13,12 @@ where they can post there own Schedules and shops they work in barbers need to r
 2. Appointment/Booking Service - no registration needed for customers (just provide contact details)
    shop and barber ID, time and date from barbers availability, pending or confirmed or cancelled
 
-3. Notification Services - maybe use Kafka idk
+## how to setup and run the application
 
-4. Search Service
+### 1. bbbb
+aaaaaaaaaaaa
+### 2 bbbb
+
 
 
 - repo to contain all micro services

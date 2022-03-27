@@ -3,7 +3,8 @@ server:
 
 spring:
   application:
-    name: API-GATEWAY-SERVICE
+    name: api-gateway-service
+
   cloud:
     gateway:
       routes:
@@ -35,3 +36,18 @@ eureka:
       defaultZone: http://localhost:8161/eureka
   instance:
     hostname: localhost
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
