@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "97a277e8-18f0-4139-bfcb-17c4bd37c685",
+		"name": "clould",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "shop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8193/shops/"
+			},
+			"response": []
+		},
+		{
+			"name": "barbers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8193/barbers/1"
+			},
+			"response": []
+		},
+		{
+			"name": "barbers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"mr name\",\r\n    \"secondName\": \"second1\",\r\n    \"email\": \"ba@w.fr\",\r\n    \"phoneNumber\": \"01 02 02 78 78\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8193/shops/2/barbers"
+			},
+			"response": []
+		},
+		{
+			"name": "app get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8193/appointments/4"
+			},
+			"response": []
+		},
+		{
+			"name": "post app",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"first\",\r\n    \"secondName\": \"customer\",\r\n    \"phoneNumber\": \"668\",\r\n    \"email\": \"me@me.com\",\r\n    \"note\": \"this is a note\",\r\n    \"appointmentDate\": \"2022-03-27\",\r\n    \"appointmentTime\": \"2022-03-27 13:15:00.000\",\r\n    \"barberID\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8193/appointments/"
+			},
+			"response": []
+		}
+	]
+}
