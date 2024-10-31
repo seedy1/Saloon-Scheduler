@@ -1,5 +1,5 @@
 # Saloon-Scheduler
-The app is to have an appointment maker to schedule haircuts with barbers. This backend API can be extended to both an mobile application and web.
+A distributed microservcie app used to make appointments to schedule haircuts with barbers. This backend API can be extended to both an mobile application and web.
 
 - java version 11
 - spring version 2.6.3
